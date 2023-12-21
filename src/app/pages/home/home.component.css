@@ -32,7 +32,6 @@ img {
   padding: .3rem .3rem;
   width: 250px;
   flex-wrap: wrap;
-  /* border: 1px solid #000; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .name {
