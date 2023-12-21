@@ -1,5 +1,26 @@
 <ul>
   <li *ngFor="let card of cards">
-    <img src="{{ card }}" alt="Card Img" />
+    <a>
+      <img src="{{ card.imageUrl }}" alt="Card Img" />
+    </a>
+    <div class="content">
+      <div class="name">
+        {{ card.name }}
+        <span class="favorite {{ card.favorite ? '' : 'not' }}">❤</span>
+      </div>
+      <div class="color">
+        <span>
+          {{ card.color }}
+        </span>
+      </div>
+      <div class="format">
+        <span *ngFor="let format of card.tags">{{ format }}</span>
+      </div>
+
+      <div class="price">
+        <span>{{ card.price | currency : "BRL" : "symbol" : "1.2-2" }}</span>
+        <button>Buy</button>
+      </div>
+    </div>
   </li>
 </ul>

@@ -8,6 +8,11 @@ a {
   color: black;
 }
 
+.cart:hover {
+  background-color: #000;
+  color: white;
+}
+
 
 .container  {
   margin: 0 auto;
