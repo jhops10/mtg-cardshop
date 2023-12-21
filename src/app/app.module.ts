@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SearchbarComponent } from './shared/searchbar/searchbar.component';
 import { FormsModule } from '@angular/forms';
+import { ColorsComponent } from './shared/colors/colors.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     SearchbarComponent,
+    ColorsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

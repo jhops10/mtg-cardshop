@@ -1,11 +1,38 @@
 import { Injectable } from '@angular/core';
 import { Card } from '../shared/models/Card';
+import { Color } from '../shared/models/Color';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CardsService {
   constructor() {}
+
+  getAllCardsBySearchTerm(searchTerm: string): Card[] {
+    return this.getAll().filter((card) => {
+      card.name.toLowerCase().includes(searchTerm.toLocaleLowerCase());
+    });
+  }
+
+  getAllColors(): Color[] {
+    return [
+      { name: 'All', count: 12 },
+      { name: 'Artifact', count: 2 },
+      { name: 'Black', count: 2 },
+      { name: 'Blue', count: 2 },
+      { name: 'Green', count: 2 },
+      { name: 'Red', count: 2 },
+      { name: 'White', count: 2 },
+    ];
+  }
+
+  getAllCardsByColor(color: string): Card[] {
+    if (color == 'All') {
+      return this.getAll();
+    } else {
+      return this.getAll().filter((card) => card.color?.includes(color));
+    }
+  }
 
   getAll(): Card[] {
     return [

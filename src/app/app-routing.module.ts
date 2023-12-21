@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'search/:searchTerm',
     component: HomeComponent,
   },
+  {
+    path: 'color/:color',
+    component: HomeComponent,
+  },
 ];
 
 @NgModule({

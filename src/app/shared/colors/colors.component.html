@@ -1,0 +1,5 @@
+<div *ngIf="colors">
+  <a *ngFor="let color of colors" routerLink="/color/{{ color.name }}">
+    {{ color.name }}({{ color.count }})</a
+  >
+</div>

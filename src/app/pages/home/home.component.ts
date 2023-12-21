@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       if (params['searchTerm']) {
-        this.cards = this.cardsService
-          .getAll()
-          .filter((card) =>
-            card.name.toLowerCase().includes(params['searchTerm'].toLowerCase())
-          );
+        this.cards = this.cardsService.getAllCardsBySearchTerm(
+          params['searchTerm']
+        );
+      } else if (params['color']) {
+        this.cards = this.cardsService.getAllCardsByColor(params['color']);
       } else {
         this.cards = this.cardsService.getAll();
       }
