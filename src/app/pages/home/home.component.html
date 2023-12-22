@@ -3,7 +3,7 @@
 
 <ul>
   <li *ngFor="let card of cards">
-    <a>
+    <a routerLink="/card/{{ card.id }}">
       <img src="{{ card.imageUrl }}" alt="Card Img" />
     </a>
     <div class="content">

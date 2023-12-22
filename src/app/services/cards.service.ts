@@ -8,6 +8,10 @@ import { Color } from '../shared/models/Color';
 export class CardsService {
   constructor() {}
 
+  getCardById(id: number): Card {
+    return this.getAll().find((card) => card.id == id)!;
+  }
+
   getAllCardsBySearchTerm(searchTerm: string): Card[] {
     return this.getAll().filter((card) => {
       card.name.toLowerCase().includes(searchTerm.toLocaleLowerCase());

@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { SearchbarComponent } from './shared/searchbar/searchbar.component';
 import { FormsModule } from '@angular/forms';
 import { ColorsComponent } from './shared/colors/colors.component';
+import { CardPageComponent } from './pages/card-page/card-page.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ColorsComponent } from './shared/colors/colors.component';
     HeaderComponent,
     SearchbarComponent,
     ColorsComponent,
+    CardPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
