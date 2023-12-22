@@ -36,6 +36,11 @@
 
 .favorite {
   font-size: 2rem;
+  color: red;
+}
+
+.not {
+  color: gray;
 }
 
 .color {
