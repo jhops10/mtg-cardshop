@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CardsService } from 'src/app/services/cards.service';
 import { Card } from 'src/app/shared/models/Card';
@@ -13,7 +13,8 @@ export class CardPageComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private cardService: CardsService
+    private cardService: CardsService,
+    private router: Router
   ) {
     activatedRoute.params.subscribe((params) => {
       if (params['id']) {
@@ -23,4 +24,8 @@ export class CardPageComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  homePage() {
+    this.router.navigate(['/']);
+  }
 }
