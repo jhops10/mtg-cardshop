@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ColorsComponent } from './shared/colors/colors.component';
 import { CardPageComponent } from './pages/card-page/card-page.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
     ColorsComponent,
     CardPageComponent,
     CartPageComponent,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

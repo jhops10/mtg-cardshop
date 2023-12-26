@@ -1,4 +1,10 @@
-<div class="container">
+<app-not-found
+  [visible]="!card"
+  notFoundMessage="Card Not Found!"
+  resetLinkText="Back to Homepage"
+></app-not-found>
+
+<div *ngIf="card" class="container">
   <img [src]="card.imageUrl" [alt]="card.name" />
   <div class="details">
     <div class="header">

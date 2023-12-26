@@ -1,6 +1,9 @@
 <app-searchbar></app-searchbar>
 <app-colors></app-colors>
-
+<app-not-found
+  [visible]="!cards || cards.length <= 0"
+  resetLinkText="Reset Search"
+></app-not-found>
 <ul>
   <li *ngFor="let card of cards">
     <a routerLink="/card/{{ card.id }}">
