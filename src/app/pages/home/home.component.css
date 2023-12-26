@@ -42,12 +42,13 @@ img {
 }
 
 .favorite {
-  color: red;
+  color: gray;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.favorite.not {
-  color: gray;
+.isFavorite {
+  color: red;
 }
 
 .color {
@@ -90,4 +91,8 @@ img {
   cursor: pointer;
   background-color: #000;
   color: white;
+}
+
+.notFavorite {
+  color: gray;
 }

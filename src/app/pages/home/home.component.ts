@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CardsService } from 'src/app/services/cards.service';
-import { CartService } from 'src/app/services/cart.service';
 import { Card } from 'src/app/shared/models/Card';
 
 @Component({
@@ -29,5 +28,9 @@ export class HomeComponent implements OnInit {
         this.cards = this.cardsService.getAll();
       }
     });
+  }
+
+  toggleFavorite(card: Card) {
+    card.favorite = !card.favorite;
   }
 }

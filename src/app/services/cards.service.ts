@@ -127,7 +127,7 @@ export class CardsService {
         color: 'Red',
         price: 0.45,
         tags: [' Modern', 'Pauper', 'Legacy'],
-        favorite: true,
+        favorite: false,
         imageUrl: 'assets/images/red-2.png',
       },
       {
@@ -136,7 +136,7 @@ export class CardsService {
         color: 'White',
         price: 7.9,
         tags: [' Modern', 'Pauper', 'Legacy'],
-        favorite: true,
+        favorite: false,
         imageUrl: 'assets/images/white-1.png',
       },
       {

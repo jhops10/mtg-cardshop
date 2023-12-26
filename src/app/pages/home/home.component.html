@@ -12,7 +12,12 @@
     <div class="content">
       <div class="name">
         {{ card.name }}
-        <span class="favorite {{ card.favorite ? '' : 'not' }}">❤</span>
+        <span
+          [ngClass]="{ isFavorite: card.favorite }"
+          (click)="toggleFavorite(card)"
+          class="favorite {{ card.favorite ? 'isFavorite' : '' }}"
+          >❤</span
+        >
       </div>
       <div class="color">
         <span>
