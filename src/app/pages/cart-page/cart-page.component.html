@@ -1,37 +1,41 @@
-<ul>
-  <li *ngFor="let cartItem of cart.items">
-    <div>
-      <img [src]="cartItem.card.imageUrl" [alt]="cartItem.card.name" />
-    </div>
-    <div>
-      <a routerLink="/card/{{ cartItem.card.id }}">{{ cartItem.card.name }}</a>
-    </div>
-    <div>
-      <select
-        #quantitySelect
-        (change)="changeQuantity(cartItem, quantitySelect.value)"
-      >
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-      </select>
-    </div>
-    <div>
-      {{ cartItem.price | currency }}
-    </div>
+<div class="container">
+  <ul>
+    <li *ngFor="let cartItem of cart.items">
+      <div>
+        <img [src]="cartItem.card.imageUrl" [alt]="cartItem.card.name" />
+      </div>
+      <div>
+        <a routerLink="/card/{{ cartItem.card.id }}">{{
+          cartItem.card.name
+        }}</a>
+      </div>
+      <div>
+        <select
+          #quantitySelect
+          (change)="changeQuantity(cartItem, quantitySelect.value)"
+        >
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <div>
+        {{ cartItem.price | currency }}
+      </div>
 
-    <div>
-      <button class="remove-button" (click)="removeFromCart(cartItem)">
-        Remove
-      </button>
-    </div>
-  </li>
-</ul>
+      <div>
+        <button class="remove-button" (click)="removeFromCart(cartItem)">
+          Remove
+        </button>
+      </div>
+    </li>
+  </ul>
 
-<div class="checkout">
-  <div>
-    <div class="card-count">{{ cart.items.length }}</div>
-    <div class="total-price">{{ cart.totalPrice }}</div>
+  <div class="checkout">
+    <div>
+      <div class="card-count">{{ cart.items.length }}</div>
+      <div class="total-price">{{ cart.totalPrice | currency }}</div>
+    </div>
   </div>
 </div>
