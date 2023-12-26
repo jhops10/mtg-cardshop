@@ -13,5 +13,5 @@ MTG CardShop é um projeto de estudo dedicado às tecnologias front-end, onde a 
 
 ## Como Rodar
 * Clone o Repositório
-* Execute o Frontend com o comando __'ng serve'__
+* Execute o comando __'ng serve'__
 
